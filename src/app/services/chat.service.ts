@@ -23,4 +23,12 @@ export class ChatService {
   getMessagePrivate() {
     return this.webSocket.listen("mensaje-privado");
   }
+
+  getUsuariosActivos() {
+    return this.webSocket.listen("usuarios-activos");
+  }
+
+  emitirUsuariosActivos() {
+    this.webSocket.emit("obtener-usuarios");
+  }
 }
